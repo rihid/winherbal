@@ -1,0 +1,128 @@
+{% extends "../base.html" %}
+{% load static %} 
+{% block stylesheet %}{% static 'store/css/store.css' %}{% endblock %}
+{% block title %}
+{% if product %}{{ product.title }}{% else %}Product{% endif %}
+{% endblock %}
+{% block content %}
+
+	
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="breadcrumb-text">
+					<p>See more Details</p>
+					<h1>Single Product</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end breadcrumb section -->
+{% comment %}
+<div class="container">
+  <div class="row g-3">
+    <div class="col-md-5 ps-3 col-lg-5 order-md-last p-0 order-1">
+      <div class="d-grid gap-2">
+        <div class="d-flex d-flex-inline justify-content-between">
+          <div><span class="h3">{{ product.price }}</span>
+            <p class="text-muted">includes tax</p>
+          </div>
+          <div>
+            <label for="select">Qty</label>
+			<input type="text" id="select">
+			
+            <select id="select" class="h6 store-select-dropdown">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+            </select>
+			
+          </div>
+        </div>
+        <hr>
+        <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Ke Keranjang</button>
+        <button type="button" id="add-button" value="{{product.id}}" class="btn btn-light fw500">Add to
+          Favorites</button>
+      </div>
+    </div>
+    <div class="col-md-7 col-lg-7 p-0">
+      <div class="card mb-3 border-0">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card-body p-1">
+              <h1 class="mb-0 h2 pe-4 pb-4">{{ product.title }}</h1>
+              <div class="bg-light"><img class="img-fluid mx-auto d-block" width="200px" alt="Responsive image"
+                  src="{{ product.image.url }}"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endcomment %}
+	
+
+	<!-- single product -->
+	<div class="single-product mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="single-product-img">
+						<img src="{{ product.image.url }}" alt="Gambar Produk">
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="single-product-content">
+						<h3>{{ product.title }}</h3>
+						<p class="single-product-pricing">{{ product.price }}</p>
+						<p>{{ product.description }}</p>
+						<div class="single-product-form">
+							<form action="post" for="select" class="d-none">
+								<input type="number" placeholder="0" id="select" value="1">
+							</form>
+							<button class="cart-btn" type="button" id="add-button" value="{{product.id}}"><i class="fas fa-shopping-cart"></i> Keranjang</button>
+							<p><strong>Categories: </strong>{{ product.category }}</p>
+						</div>
+						<h4>Share:</h4>
+						<ul class="product-share">
+							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href=""><i class="fab fa-twitter"></i></a></li>
+							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end single product -->
+
+
+
+<script>
+  $(document).on('click', '#add-button', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: '{% url "basket:basket_add" %}',
+      data: {
+        productid: $('#add-button').val(),
+        productqty: $('#select').val(),
+        csrfmiddlewaretoken: "{{csrf_token}}",
+        action: 'post'
+      },
+      success: function (json) {
+        document.getElementById("basket-qty").innerHTML = json.qty
+      },
+      error: function (xhr, errmsg, err) {}
+    });
+  })
+</script>
+
+{% endblock %}
