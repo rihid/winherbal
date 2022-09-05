@@ -1,0 +1,168 @@
+{% extends "base-admin.html" %}
+{% load static %}
+{% block title %}Win Herbal - Admin{% endblock %}
+{% block content %}
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Tables</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Kategori</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title m-b-0">Kategori</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-row bd-highlight mb-3 justify-content-between">
+                                    <form class="form-inline my-2 my-lg-0">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                      </form>
+                                    <div class="p-2 bd-highlight">
+                                        <button type="button" class="btn btn-outline-success"><span class="mr-2"><i class="fas fa-plus-circle"></i></span> Tambah Kategori</button>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>
+                                                    <label class="customcheckbox m-b-20">
+                                                        <input type="checkbox" id="mainCheckbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </th>
+                                                <th scope="col">Rendering engine</th>
+                                                <th scope="col">Browser</th>
+                                                <th scope="col">Platform(s)</th>
+                                                <th scope="col">Engine version</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="customtable">
+                                            <tr>
+                                                <th>
+                                                    <label class="customcheckbox">
+                                                        <input type="checkbox" class="listCheckbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </th>
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 4.0</td>
+                                                <td>Win 95+</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label class="customcheckbox">
+                                                        <input type="checkbox" class="listCheckbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </th>
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.0</td>
+                                                <td>Win 95+</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label class="customcheckbox">
+                                                        <input type="checkbox" class="listCheckbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </th>
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 4.0</td>
+                                                <td>Win 95+</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label class="customcheckbox">
+                                                        <input type="checkbox" class="listCheckbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </th>
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.0</td>
+                                                <td>Win 95+</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label class="customcheckbox">
+                                                        <input type="checkbox" class="listCheckbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </th>
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.5</td>
+                                                <td>Win 95+</td>
+                                                <td>5.5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <label class="customcheckbox">
+                                                        <input type="checkbox" class="listCheckbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </th>
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 6</td>
+                                                <td>Win 98+</td>
+                                                <td>6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+{% endblock content %}
