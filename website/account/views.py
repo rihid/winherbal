@@ -89,3 +89,13 @@ def account_activate(request, uidb64, token):
         return redirect('account:dashboard')
     else:
         return render(request, 'account/registration/activation_invalid.html')
+
+
+
+# Admin Area
+
+def product_categ(request):
+    return render(request, 'adm/dashboard/category.html')
+
+def product(request):
+    return render(request, 'adm/dashboard/product.html')
