@@ -14,13 +14,16 @@ from .models import UserBase
 from .tokens import account_activation_token
 
 
+# @login_required
+# def dashboard(request):
+#     orders = user_orders(request)
+#     return render(request,
+#                   'account/dashboard/dashboard.html',
+#                   {'section': 'profile', 'orders': orders})
+
 @login_required
 def dashboard(request):
-    orders = user_orders(request)
-    return render(request,
-                  'account/dashboard/dashboard.html',
-                  {'section': 'profile', 'orders': orders})
-
+    return render(request, 'adm/dashboard/dashboard.html')
 
 @login_required
 def edit_details(request):
