@@ -1642,14 +1642,14 @@ div.owl-controls, .owl-controls div {
 
 .latest-news-bg img {
   height: 200px;
-  width: 350px;
+  /* width: 350px; */
   object-fit: cover;
-  /* background-size: cover;
+  background-size: cover;
   background-position: center;
   border-radius: 10px;
   background-color: #ddd;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; */
+  border-bottom-left-radius: 0;
 }
 
 .single-latest-news h3 {
@@ -1696,10 +1696,6 @@ p.excerpt {
   margin-bottom: 30px;
 }
 
-.single-artcile-bg {
-  background-image: url(../img/latest-news/news-bg-3.jpg);
-  height: 450px;
-}
 
 .pagination-wrap {
   margin-top: 40px;

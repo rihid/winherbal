@@ -26,9 +26,9 @@
                     <div class="product-filters">
                         <ul>
                             <li class="active" data-filter="*">All</li>
-                            <li data-filter=".strawberry">Jamu</li>
-                            <li data-filter=".berry">Madu</li>
-                            <li data-filter=".lemon">Gula</li>
+							{%for c in categories %}
+                            <li data-filter="{{ c.get_absolute_url }}">{{ c.name|title }}</li>
+							{%endfor%}
                         </ul>
                     </div>
                 </div>
@@ -112,6 +112,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- end logo carousel -->
+	<!-- end logo carousel --> 
 
 {% endblock %}

@@ -51,6 +51,7 @@ TEMPLATES = [
                 'store.context_processors.categories',
                 # 'blog.context_processors.categories',
                 'basket.context_processors.basket',
+                'store.views.categories'
             ],
         },
     },

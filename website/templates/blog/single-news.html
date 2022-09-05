@@ -24,7 +24,10 @@
 				<div class="col-lg-8">
 					<div class="single-article-section">
 						<div class="single-article-text">
-							<div class="single-artcile-bg"></div>
+							<div class="single-artcile-bg">
+								<img src="{{ article.gambar.url }}" alt="Gambar" class="img-fluid" style="height: 450px;
+								object-fit: cover;">
+							</div>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i>{{ article.penulis }}</span>
 								<span class="date"><i class="fas fa-calendar"></i>{{ article.created }}</span>

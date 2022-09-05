@@ -3,6 +3,10 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger #Untuk 
 from .models import Category, Product
 from blog.models import Article
 
+def categories(request):
+    return {
+        'categories' : Category.objects.all()
+    }
 
 def home(request):
     products_grid = Product.products.all()
@@ -58,3 +62,6 @@ def category_list(request, category_slug=None):
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug, in_stock=True)
     return render(request, 'store/single.html', {'product': product})
+
+def about(request):
+    return render(request, 'store/about.html')
