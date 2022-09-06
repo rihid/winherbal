@@ -21,8 +21,10 @@ from .tokens import account_activation_token
 #                   'account/dashboard/dashboard.html',
 #                   {'section': 'profile', 'orders': orders})
 
+
 @login_required
 def dashboard(request):
+
     return render(request, 'adm/dashboard/dashboard.html')
 
 @login_required
@@ -51,7 +53,7 @@ def delete_user(request):
 def account_register(request):
 
     if request.user.is_authenticated:
-        return redirect('account:dashboard')
+        return redirect('adm:dashboard')
 
     if request.method == 'POST':
         registerForm = RegistrationForm(request.POST)

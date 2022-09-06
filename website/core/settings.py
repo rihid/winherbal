@@ -114,8 +114,8 @@ STRIPE_SECRET_KEY = 'sk_test_51IHxTTJm9Ogh6om6ryBhjePFWUTXvweI5y5gXjFhgPWVztF83X
 
 # Custom user model
 AUTH_USER_MODEL = 'account.UserBase'
-LOGIN_REDIRECT_URL = '/account/dashboard'
-LOGIN_URL = '/account/login/'
+LOGIN_REDIRECT_URL = '/adm/dashboard'
+LOGIN_URL = '/adm/login/'
 
 # Email setting
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

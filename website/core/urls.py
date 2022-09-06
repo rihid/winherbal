@@ -9,7 +9,7 @@ urlpatterns = [
     path('basket/', include('basket.urls', namespace='basket')),
     path('blog/', include('blog.urls', namespace='blog')),
     path('payment/', include('payment.urls', namespace='payment')),
-    path('adm/', include('account.urls', namespace='account')),
+    path('adm/', include('account.urls', namespace='adm')),
     path('orders/', include('orders.urls', namespace='orders')),
 ]
 
