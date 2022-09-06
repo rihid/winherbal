@@ -1,0 +1,102 @@
+{% extends "base-admin.html" %}
+{% load static %}
+{% block title %}Win Herbal - Admin{% endblock %}
+{% block content %}
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+          <!-- ============================================================== -->
+          <!-- Bread crumb and right sidebar toggle -->
+          <!-- ============================================================== -->
+          <div class="page-breadcrumb">
+              <div class="row">
+                  <div class="col-12 d-flex no-block align-items-center">
+                      <h4 class="page-title">Produk</h4>
+                      <div class="ml-auto text-right">
+                          <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                                <li class="breadcrumb-item"><a href="#">Produk</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Tambah</li>
+                              </ol>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Bread crumb and right sidebar toggle -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid">
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="card">
+                          <div class="card-body">
+                              <h4 class="card-title">Tambahkan Produk</h4>
+                              <div class="form-group">
+                                  <label for="hue-demo">Hue</label>
+                                  <input type="text" id="hue-demo" class="form-control demo" data-control="hue" value="#ff6161">
+                              </div>
+                              <div class="form-group">
+                                  <label for="position-bottom-left">Bottom left (default)</label>
+                                  <input type="text" id="position-bottom-left" class="form-control demo" data-position="bottom left" value="#0088cc">
+                              </div>
+                              <div class="form-group">
+                                  <label for="position-top-right">Top right</label>
+                                  <input type="text" id="position-top-right" class="form-control demo" data-position="top right" value="#0088cc">
+                              </div>
+                              <label>Datepicker</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control mydatepicker" placeholder="mm/dd/yyyy">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                  </div>
+                              </div>
+                              <label class="m-t-15">Autoclose Datepicker</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy">
+                                  <div class="input-group-append">
+                                      <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="border-top">
+                              <div class="card-body">
+                                  <button type="submit" class="btn btn-success">Save</button>
+                                  <button type="submit" class="btn btn-primary">Reset</button>
+                                  <button type="submit" class="btn btn-info">Edit</button>
+                                  <button type="submit" class="btn btn-danger">Cancel</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- ============================================================== -->
+              <!-- End PAge Content -->
+              <!-- ============================================================== -->
+              <!-- ============================================================== -->
+              <!-- Right sidebar -->
+              <!-- ============================================================== -->
+              <!-- .right-sidebar -->
+              <!-- ============================================================== -->
+              <!-- End Right sidebar -->
+              <!-- ============================================================== -->
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page wrapper  -->
+      <!-- ============================================================== -->
+{% endblock content %}
+

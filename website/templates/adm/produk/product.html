@@ -12,7 +12,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Tables</h4>
+                        <h4 class="page-title">Produk</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -39,17 +39,17 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title m-b-0">Produk</h5>
+                                <h5 class="card-title m-b-0">Daftar Produk</h5>
                             </div>
                             <div class="card-body">
                                 <div class="d-flex flex-row bd-highlight mb-3 justify-content-between">
                                     <form class="form-inline my-2 my-lg-0">
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
                                       </form>
                                     <div class="p-2 bd-highlight">
-                                        <button type="button" class="btn btn-outline-success"><span class="mr-2"><i class="fas fa-plus-circle"></i></span> Tambah Produk</button>
-                                    </div>
+                                        <a class="btn btn-outline-success" href="{% url 'account:product_add' %}" role="button"><span class="mr-2"><i class="fas fa-plus-circle"></i></span> Tambah Produk</a>
+                                    </div> 
                                 </div>
                             </div>
                                 <div class="table-responsive">
@@ -76,10 +76,10 @@
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </th>
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 4.0</td>
-                                                <td>Win 95+</td>
-                                                <td>4</td>
+                                                <td><strong>Madu Klanceng</strong></td>
+                                                <td>madu-klanceng</td>
+                                                <td>50000</td>
+                                                <td>Sept. 3, 2022, 5:13 a.m.</td>
                                             </tr>
                                             <tr>
                                                 <th>
@@ -88,10 +88,10 @@
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </th>
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 5.0</td>
-                                                <td>Win 95+</td>
-                                                <td>5</td>
+                                                <td><strong>Jamu Empon-Empon</strong></td>
+                                                <td>jamu-empon-empon</td>
+                                                <td>15000</td>
+                                                <td>Sept. 3, 2022, 5:12 a.m.</td>
                                             </tr>
                                             <tr>
                                                 <th>
@@ -100,10 +100,10 @@
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </th>
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 4.0</td>
-                                                <td>Win 95+</td>
-                                                <td>4</td>
+                                                <td><strong>Jamu Kunyit Sirih</strong></td>
+                                                <td>jamu-kunyit-sirih</td>
+                                                <td>15000</td>
+                                                <td>Aug. 30, 2022, 7:43 a.m.</td>
                                             </tr>
                                             <tr>
                                                 <th>
@@ -112,10 +112,10 @@
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </th>
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 5.0</td>
-                                                <td>Win 95+</td>
-                                                <td>5</td>
+                                                <td><strong>Madu Murni</strong></td>
+                                                <td>madu-murni</td>
+                                                <td>80000</td>
+                                                <td>Aug. 30, 2022, 7:42 a.m.</td>
                                             </tr>
                                             <tr>
                                                 <th>
@@ -124,10 +124,10 @@
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </th>
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 5.5</td>
-                                                <td>Win 95+</td>
-                                                <td>5.5</td>
+                                                <td><strong>Gula Aren</strong></td>
+                                                <td>gula-aren</td>
+                                                <td>2000</td>
+                                                <td>Aug. 22, 2022, 4:24 a.m.</td>
                                             </tr>
                                             <tr>
                                                 <th>
@@ -136,10 +136,10 @@
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </th>
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 6</td>
-                                                <td>Win 98+</td>
-                                                <td>6</td>
+                                                <td><strong>Beras Kencur Bubuk</strong></td>
+                                                <td>beras-kencur-bubuk</td>
+                                                <td>15000</td>
+                                                <td>Aug. 6, 2022, 6:48 a.m.</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -165,4 +165,5 @@
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
+
 {% endblock content %}

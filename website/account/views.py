@@ -95,7 +95,10 @@ def account_activate(request, uidb64, token):
 # Admin Area
 
 def product_categ(request):
-    return render(request, 'adm/dashboard/category.html')
+    return render(request, 'adm/produk/category.html')
 
 def product(request):
-    return render(request, 'adm/dashboard/product.html')
+    return render(request, 'adm/produk/product.html')
+
+def product_add(request):
+    return render(request, 'adm/produk/tambah-produk.html')
