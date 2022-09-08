@@ -14,19 +14,21 @@
   }
 </style>
 
-<!-- Coba -->
-<div class="container mb-4">
-  <div class="row">
-    <div class="col-lg-12">
-      <button>
-        <a href="">Panah</a>
-      </button>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Fresh and Organic</p>
+						<h1>Checkout</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+<div class="container my-5">
   <div class="row"> 
     {% if basket|length == 0 %}
     <div class="col-12">Your basket is empty <a href="{% url 'store:home' %}">Produk</a></div>
