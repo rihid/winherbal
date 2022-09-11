@@ -1393,12 +1393,12 @@ span.close-btn {
 span.close-btn:hover {
   color: #fff;
 }
-
+/* 
 a.mobile-show.search-bar-icon {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-}
+} */
 
 a.mobile-show.search-bar-icon:hover {
   color: #F28123;
@@ -2091,7 +2091,7 @@ a.video-play-btn {
 }
 
 .abt-bg {
-  background-image: url(../img/abt.jpg);
+  background-image: url(../img/abt-yt.jpg);
   height: 100%;
   width: 100%;
   background-size: cover;

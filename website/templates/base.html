@@ -11,7 +11,7 @@
 	<title>Win Herbal</title>
 
 	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="{% static 'main/img/favicon.png' %}">
+	<link rel="shortcut icon" type="image/png" href="{% static 'main/img/logowin.png' %}">
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -68,101 +68,59 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 text-center">
-					{% comment %}
+					
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.html">
-								<img src="{% static 'main/img/logo.png' %}" alt="">
+								<img src="{% static 'main/img/logowin.png' %}" alt="">
 							</a>
 						</div>
 						<!-- logo -->
 
 						<!-- menu start -->
 						<nav class="main-menu">
-							<div>
-								<ul>
-									<li><a href="{% url 'store:home' %}">Beranda</a></li>
-									<li><a href="{% url 'store:product_all' %}">Produk</a></li>
-									<li><a href="#">Pages</a>
-										<ul class="sub-menu">
-											<li><a href="404.html">404 page</a></li>
-											<li><a href="about.html">About</a></li>
-											<li><a href="cart.html">Cart</a></li>
-											<li><a href="checkout.html">Check Out</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="news.html">News</a></li>
-											<li><a href="shop.html">Shop</a></li>
-										</ul>
-									</li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li> 
-									<!--  
-									<span class="float-right">
-	
-										<li>
-										  <div class="header-icons text-end d-inline-block">
-											<a class="shopping-cart" href="{% url 'basket:basket_summary' %}">
-											  <i class="fas fa-shopping-cart"></i>
-											  
-											  {% with total_qty=basket|length %}
-											  <span id="basket-qty" class="basket-qty">
-												{% if total_qty > 0 %}
-												{{ total_qty }}
-												{% else %}
-												0
-												{% endif %}
-											  </span>
-											  {% endwith %}
-											</a>
-										  </div>
-										</li>
-										<li>
-										  <a href="#">Home</a>
-											<ul class="sub-menu">
-											  <li><a href="index.html">Static Home</a></li>
-											  <li><a href="index_2.html">Slider Home</a></li>
-											</ul>
-										</li>
-									</span>
-									  -->
-								</ul>
-								<!--  -->
-								<span class="float-right">
-	
-									<li>
-									  <div class="header-icons text-end d-inline-block">
-										<a class="shopping-cart" href="{% url 'basket:basket_summary' %}">
-										  <i class="fas fa-shopping-cart"></i>
-										  
-										  {% with total_qty=basket|length %}
-										  <span id="basket-qty" class="basket-qty">
+							<ul>
+								<li class="current-list-item"><a href="{% url 'store:home' %}">Beranda</a></li>
+								<li><a href="{% url 'store:tentang' %}">Tentang</a></li>
+								<li><a href="{% url 'store:product_all' %}">Produk</a></li>
+								<li><a href="{% url 'blog:all_article' %}">Blog</a></li>
+								<li><a href="about.html">Kontak</a></li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart d-none" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="{% url 'basket:basket_summary' %}">
+											<i class="fas fa-shopping-cart"></i>
+											{% with total_qty=basket|length %}
+											<span id="basket-qty" class="basket-qty" style="color: #fff;">
 											{% if total_qty > 0 %}
 											{{ total_qty }}
 											{% else %}
-											0
+											
 											{% endif %}
-										  </span>
-										  {% endwith %}
+											</span>
+											{% endwith %}
 										</a>
-									  </div>
-									</li>
-									<li>
-									  <a href="#"><i class="fas fa-user-alt"></i></a>
-										<ul class="sub-menu">
-										  <li><a href="index.html">Dashboard</a></li>
-										  <li><a href="index_2.html">Logout</a></li>
-										</ul>
-									</li>
-								</span>
-								<!--  -->
-							</div>
+									</div>
+								</li>
+							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<a class="mobile-show search-bar-icon" href="{% url 'basket:basket_summary' %}">
+							<i class="fas fa-shopping-cart"></i>
+							{% with total_qty=basket|length %}
+							<span id="basket-qty" class="basket-qty" style="color: #fff;">
+							{% if total_qty > 0 %}
+							{{ total_qty }}
+							{% else %}
+							
+							{% endif %}
+							</span>
+							{% endwith %}
+						</a>
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>
-					{% endcomment %}
+					{% comment %}
 					<!--  -->
 					<nav class="navbar navbar-expand-lg navbar-light nav-style">
 						<a class="navbar-brand font-weight-bold" style="color: #F28123;" href="{% url 'store:home' %}">
@@ -231,12 +189,13 @@
 						</div>
 					</nav>
 					<!--  -->
+					{% endcomment %}
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end header -->
-	
+	{% comment %}
 	<!-- search area -->
 	<div class="search-area">
 		<div class="container">
@@ -255,6 +214,7 @@
 		</div>
 	</div>
 	<!-- end search area -->
+	{% endcomment %}
 	{% block content%}
 	{% endblock%}
 	<!-- footer -->
@@ -263,8 +223,8 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
-						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<h2 class="widget-title">Tentang Kami</h2>
+						<p>Win Herbal merupakan UMKM yang memproduksi jamu dan aneka minuman herbal bubuk fresh dan original, serta dikemas dengan cinta dan pengertian.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -279,13 +239,13 @@
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box pages">
-						<h2 class="widget-title">Pages</h2>
+						<h2 class="widget-title">Halaman</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Shop</a></li>
-							<li><a href="news.html">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="about.html">Tentang</a></li>
+							<li><a href="services.html">Produk</a></li>
+							<li><a href="news.html">Blog</a></li>
+							<li><a href="contact.html">Kontak</a></li>
 						</ul>
 					</div>
 				</div>

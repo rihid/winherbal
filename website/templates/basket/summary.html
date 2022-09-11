@@ -20,8 +20,8 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Fresh and Organic</p>
-						<h1>Checkout</h1>
+						<p>Fresh dan Original</p>
+						<h1>Keranjang</h1>
 					</div>
 				</div>
 			</div>
@@ -54,9 +54,7 @@
               </div> 
               <div class="col-lg-4 col-sm-4 col-6"> 
                 <div class="price-wrap lh-sm"> 
-                  <var class="price h6">$1156.00</var> 
-                  <br> 
-                  <small class="text-muted"> {{product.price}} / per item </small> 
+                  <var class="price h6">{{product.price}} </var> 
                 </div> <!-- price-wrap .// --> 
               </div> 
               <div class="col-lg col-sm-4">
@@ -68,7 +66,7 @@
                     <option value="2">2</option>
                   </select>
                   <a type="button" id="delete-button" data-index="{{product.id}}"
-                    class="delete-button text-decoration-none small">Delete</a>
+                    class="delete-button text-decoration-none small"><i class="fas fa-trash-alt"></i></a>
                 </div>
               </div>
             </div>
@@ -77,37 +75,27 @@
           {% endfor %}
         </div> <!-- card-body .// -->
         <div class="card-body border-top"> 
-          <p class="mb-0"><i class="me-2 text-success fa fa-truck"></i> Free Delivery within 1-2 weeks</p>
+          <p class="mb-0"><i class="me-2 text-success fa fa-truck"></i> Pengiriman ke manapun</p>
         </div> <!-- card-body.// -->
       </div> <!-- card.// --> 
     </div> <!-- col.// --> 
-    {% endif %}
+    
     <aside class="col-lg-3"> 
       <div class="card"> 
         <div class="card-body"> 
-          <dl class="dlist-align"> 
-            <dt>Subtotal price:</dt> 
-            <dd class="text-end"> {{basket.get_subtotal_price}}</dd> 
-          </dl> 
-          <dl class="dlist-align"> 
-            <dt>Discount:</dt> 
-            <dd class="text-end text-success"> - $60.00 </dd> 
-          </dl> 
-          <dl class="dlist-align"> 
-            <dt>TAX:</dt> 
-            <dd class="text-end text-danger"> + $14.00 </dd> 
-          </dl> 
+          <div class="alert alert-warning" role="alert">
+            <span class="mr-1"><i class="fas fa-info-circle"></i></span>
+            Setelah menekan tombol pesan, anda akan diarahkan ke Whatsapp dan akan dilayani admin untuk detail pemesanan selanjutnya.
+          </div> 
           <hr> 
-          <dl class="dlist-align"> 
-            <dt>Total:</dt> 
-            <dd class="text-end text-dark h5"> {{basket.get_total_price}} </dd> 
-          </dl> 
           <div class="d-grid gap-2 my-3"> 
-            <a href="#" class="btn btn-primary w-100"> Make Purchase </a> <a href="#" class="btn btn-light w-100"> Back to shop </a> 
+            <a href="#" class="btn btn-success w-100 mb-2"> Pesan Melalui Whatsapp </a> 
+            <a href="#" class="btn btn-light w-100"> Kembali Ke Produk </a> 
           </div> 
         </div> <!-- card-body.// --> 
       </div> <!-- card.// --> 
     </aside> <!-- col.// -->
+    {% endif %}
   </div>
 </div>
 
