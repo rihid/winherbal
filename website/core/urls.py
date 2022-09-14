@@ -11,6 +11,7 @@ urlpatterns = [
     path('payment/', include('payment.urls', namespace='payment')),
     path('adm/', include('account.urls', namespace='adm')),
     path('orders/', include('orders.urls', namespace='orders')),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:

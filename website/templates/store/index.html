@@ -3,7 +3,6 @@
 {% block title %}Win Herbal{% endblock %}
 {% block content %}
 
-
 	<!-- home page slider -->
 	<div class="homepage-slider">
 		<!-- single home slider -->
@@ -272,7 +271,7 @@
 	<!-- end shop banner -->
 	
 	<!-- latest news -->
-	<div class="latest-news pt-120 pb-120">
+	<div class="latest-news pt-120 pb-120 mb-100 mt-100">
 		<div class="container">
 
 			<div class="row">
@@ -301,8 +300,8 @@
 								<span class="author"><i class="fas fa-user"></i> {{ post.penulis }}</span>
 								<span class="date"><i class="fas fa-calendar"></i> {{ post.created }}</span>
 							</p>
-							<p class="excerpt">{{ post.body|slice:":120" }}...</p>
-							<a href="{{ post.get_absolute_url }}" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">{{ post.body|safe|slice:":120" }}...</p>
+							<a href="{{ post.get_absolute_url }}" class="read-more-btn">Selengkapnya <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -318,6 +317,7 @@
 		</div>
 	</div>
 	<!-- end latest news -->
+
 
 
 

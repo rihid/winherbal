@@ -10,8 +10,8 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Organic Information</p>
-						<h1>News Article</h1>
+						<p>Artikel & Berita</p>
+						<h1>Informasi Win Herbal</h1>
 					</div>
 				</div>
 			</div>
@@ -40,8 +40,8 @@
 								<span class="author"><i class="fas fa-user"></i> {{ post.penulis }}</span>
 								<span class="date"><i class="fas fa-calendar"></i> {{ post.created }}</span>
 							</p>
-							<p class="excerpt">{{ post.body|slice:":120" }}...</p>
-							<a href="{{ post.get_absolute_url }}" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							<p class="excerpt">{{ post.body|safe|slice:":120" }}...</p>
+							<a href="{{ post.get_absolute_url }}" class="read-more-btn">Selengkapnya <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>

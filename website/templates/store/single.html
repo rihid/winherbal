@@ -13,8 +13,8 @@
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2 text-center">
 				<div class="breadcrumb-text">
-					<p>See more Details</p>
-					<h1>Single Product</h1>
+					<p>Lihat Lebih Detal</p>
+					<h1>Detail Produk</h1>
 				</div>
 			</div>
 		</div>
@@ -81,12 +81,12 @@
 					<div class="single-product-content">
 						<h3>{{ product.title }}</h3>
 						<p class="single-product-pricing">{{ product.price }}</p>
-						<p>{{ product.description }}</p>
+						<p>{{ product.description|safe }}</p>
 						<div class="single-product-form">
 							<form action="post" for="select" class="d-none">
 								<input type="number" placeholder="0" id="select" value="1">
 							</form>
-							<button class="cart-btn btn btn-success" type="button" id="add-button" value="{{product.id}}"><i class="fas fa-shopping-cart"></i> Keranjang</button>
+							<button class="cart-btn btn btn-success mt-2 mb-3" type="button" id="add-button" value="{{product.id}}"><i class="fas fa-shopping-cart"></i> Keranjang</button>
 							<p><strong>Kategori: </strong>{{ product.category }}</p>
 						</div>
 						<!-- <h4>Share:</h4>

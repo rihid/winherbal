@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.urls import reverse
+from tinymce.models import HTMLField
 
 class ArCategory(models.Model):
     name = models.CharField(max_length=15, db_index=True)
@@ -16,7 +17,7 @@ class Article(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='pengupload')
     judul = models.CharField(max_length=150)
     penulis = models.CharField(max_length=15, default='admin')
-    body = models.TextField(blank=True)
+    body = HTMLField(blank=True)
     gambar = models.ImageField(upload_to='blog/', default='images/default.png')
     slug = models.SlugField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
