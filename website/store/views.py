@@ -65,3 +65,6 @@ def product_detail(request, slug):
 
 def about(request):
     return render(request, 'store/about.html')
+
+def kontak(request):
+    return render(request, 'store/contact.html')

@@ -85,7 +85,7 @@
 								<li><a href="{% url 'store:tentang' %}">Tentang</a></li>
 								<li><a href="{% url 'store:product_all' %}">Produk</a></li>
 								<li><a href="{% url 'blog:all_article' %}">Blog</a></li>
-								<li><a href="about.html">Kontak</a></li>
+								<li><a href="{% url 'store:kontak' %}">Kontak</a></li>
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart d-none" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
@@ -241,11 +241,11 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Halaman</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">Tentang</a></li>
-							<li><a href="services.html">Produk</a></li>
-							<li><a href="news.html">Blog</a></li>
-							<li><a href="contact.html">Kontak</a></li>
+							<li><a href="{% url 'store:home' %}">Home</a></li>
+							<li><a href="{% url 'store:tentang' %}">Tentang</a></li>
+							<li><a href="{% url 'store:product_all' %}">Produk</a></li>
+							<li><a href="{% url 'blog:all_article' %}">Blog</a></li>
+							<li><a href="{% url 'store:kontak' %}">Kontak</a></li>
 						</ul>
 					</div>
 				</div>
@@ -253,9 +253,9 @@
 					<div class="footer-box subscribe">
 						<h2 class="widget-title">Ikuti kami</h2>
 						<ul>
-							<li><a href="index.html">Facebook</a></li>
-							<li><a href="about.html">Instagram</a></li>
-							<li><a href="services.html">Whatapp</a></li>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">Whatapp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -272,6 +272,7 @@
 					<p>Copyrights &copy; 2022 - <a href="">Rizal</a>,  All Rights Reserved.</p>
 				</div>
 				<div class="col-lg-6 text-right col-md-12">
+					<!-- 
 					<div class="social-icons">
 						<ul>
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -280,7 +281,7 @@
 							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
