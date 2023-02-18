@@ -31,7 +31,7 @@
 <div class="container my-5">
   <div class="row"> 
     {% if basket|length == 0 %}
-    <div class="col-12">Your basket is empty <a href="{% url 'store:home' %}">Produk</a></div>
+    <div class="col-12">Keranjang anda kosong, isi kembali ke halaman <a href="{% url 'store:home' %}">Produk</a></div>
     {% else %}
     <div class="col-lg-9">
       <div class="card">
